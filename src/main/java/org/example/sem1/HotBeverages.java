@@ -1,10 +1,12 @@
 package org.example.sem1;
 
-public class HotBeverages extends Product{
+public class HotBeverages extends Product {
 
     private int temperature;
+
     public HotBeverages(String kind, double price, Long id, int temperature) {
         super(kind, price, id);
+            this.temperature = temperature;
     }
 
     public int getTemperature() {
