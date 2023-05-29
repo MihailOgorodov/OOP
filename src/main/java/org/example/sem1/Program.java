@@ -24,7 +24,7 @@ public class Program {
         Product product1 = new Apple("Apple", 20, 1L);
         Product product2 = new Orange("Orange", 30, 2L);
         Product product3 = new Banana("Banana", 25, 3L);
-        Product product4 = new Milk("Milk", 15, 4L, 10);
+        HotBeverages product4 = new Milk("Milk", 15, 4L, 10L);
 
 
         vending.addProduct(product1);

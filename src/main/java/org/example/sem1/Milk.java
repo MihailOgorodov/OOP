@@ -2,7 +2,7 @@ package org.example.sem1;
 
 public class Milk extends HotBeverages{
 
-    public Milk(String kind, double price, Long id, int temperature) {
+    public Milk(String kind, double price, Long id, Long temperature) {
         super(kind, price, id, temperature);
     }
 
