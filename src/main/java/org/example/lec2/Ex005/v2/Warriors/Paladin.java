@@ -1,6 +1,6 @@
 package org.example.lec2.Ex005.v2.Warriors;
 
-import Lesson_08.Ex005.v2.Hero;
+import org.example.lec2.Ex005.v2.Hero;
 
 public class Paladin extends Hero implements Warrior  {
 
