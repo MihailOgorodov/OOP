@@ -1,7 +1,5 @@
 package org.example.lec3.task3;
 
-import Lesson_09.Ex004.ExBeverage.*;
-
 // три вода
 public class Program {
     public static void main(String[] args) {
