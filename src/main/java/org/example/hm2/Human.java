@@ -47,4 +47,9 @@ public class Human extends Actor {
     String getName() {
         return name;
     }
+
+    @Override
+    public void setMakeOrder(boolean b) {
+
+    }
 }

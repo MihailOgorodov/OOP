@@ -24,7 +24,7 @@ public class Program {
         // #region raw type
         // ArrayList is a raw type. References to generic type ArrayList<E> should be
         // parameterized
-        List list = new ArrayList();
+        List<java.io.Serializable> list = new ArrayList<>();
 
         for (int i = 1; i <= 5; i++) {
             list.add(String.format("string %d", i));
@@ -42,7 +42,7 @@ public class Program {
 
     }
 
-    static int allLength(List li) {
+    static int allLength(List<java.io.Serializable> li) {
         int count =0;
         for (Object o : li) {
             count += ((String)o).length();
