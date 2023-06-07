@@ -4,11 +4,10 @@ import org.example.hw4.model.Teacher;
 import org.example.hw4.model.User;
 import org.example.hw4.repository.TeacherRepository;
 import org.example.hw4.repository.UserRepository;
-import org.example.sem4.model.Student;
-import org.example.sem4.service.UserService;
+
 
 import java.util.Collections;
-import java.util.Comparator;
+
 import java.util.List;
 
 public class TeacherService implements UserService<Teacher> {

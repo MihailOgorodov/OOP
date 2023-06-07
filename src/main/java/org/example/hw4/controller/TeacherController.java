@@ -1,14 +1,12 @@
 package org.example.hw4.controller;
 
 import org.example.hw4.model.Teacher;
-import org.example.hw4.service.StudentService;
 import org.example.hw4.service.TeacherService;
-import org.example.sem4.controller.UserController;
-import org.example.sem4.service.UserService;
+import org.example.hw4.service.UserService;
 
 import java.util.List;
 
-public class TeacherController implements UserController {
+public class TeacherController implements UserController<Teacher> {
     public UserService<Teacher> teacherService;
 
     public TeacherController(TeacherService teacherService) {
@@ -21,12 +19,12 @@ public class TeacherController implements UserController {
     }
 
     @Override
-    public List getAllSortUsers() {
+    public List<Teacher> getAllSortUsers() {
         return teacherService.getAllSortUsers();
     }
 
     @Override
-    public List getAllSortUsersByFamilyName() {
+    public List<Teacher> getAllSortUsersByFamilyName() {
         return teacherService.getAllSortUsersByFamilyName();
     }
 
@@ -37,12 +35,12 @@ public class TeacherController implements UserController {
     }
 
     @Override
-    public List getAll() {
+    public List<Teacher> getAll() {
         return teacherService.getAll();
     }
 
     @Override
-    public List getAllSortUsersByAge() {
+    public List<Teacher> getAllSortUsersByAge() {
         return teacherService.getAllSortUsersByAge();
     }
 }

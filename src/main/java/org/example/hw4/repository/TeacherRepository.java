@@ -1,6 +1,5 @@
 package org.example.hw4.repository;
 
-import org.example.hw4.model.Student;
 import org.example.hw4.model.Teacher;
 
 import java.util.ArrayList;
