@@ -1,6 +1,6 @@
-package org.example.hw4.repository;
+package org.example.hw5.repository;
 
-import org.example.hw4.model.User;
+import org.example.hw5.model.User;
 
 import java.util.List;
 

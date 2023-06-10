@@ -1,15 +1,15 @@
-package org.example.hw4.controller;
+package org.example.hw5.service;
 
-import org.example.hw4.model.User;
+import org.example.hw5.model.User;
 
 import java.util.List;
 
-public interface UserController<T extends User> {
+public interface UserService<T extends User> {
     void create(String fullName, Integer age, String phoneNumber);
+    List<T> getAll();
     List<T> getAllSortUsers();
     List<T> getAllSortUsersByFamilyName();
-    boolean removeUser(String fullName);
-    List<T> getAll();
     List<T> getAllSortUsersByAge();
+    void removeUser(String fullName);
 
 }

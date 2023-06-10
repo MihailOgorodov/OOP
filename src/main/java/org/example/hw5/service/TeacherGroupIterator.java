@@ -1,7 +1,7 @@
-package org.example.hw4.service;
+package org.example.hw5.service;
 
 
-import org.example.hw4.model.Teacher;
+import org.example.hw5.model.Teacher;
 
 import java.util.Iterator;
 import java.util.List;

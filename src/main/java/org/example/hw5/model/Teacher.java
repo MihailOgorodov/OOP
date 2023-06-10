@@ -1,4 +1,4 @@
-package org.example.hw4.model;
+package org.example.hw5.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

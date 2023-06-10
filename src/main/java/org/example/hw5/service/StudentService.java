@@ -1,9 +1,9 @@
-package org.example.hw4.service;
+package org.example.hw5.service;
 
-import org.example.hw4.model.Student;
-import org.example.hw4.model.User;
-import org.example.hw4.repository.StudentRepository;
-import org.example.hw4.repository.UserRepository;
+import org.example.hw5.model.Student;
+import org.example.hw5.model.User;
+import org.example.hw5.repository.StudentRepository;
+import org.example.hw5.repository.UserRepository;
 
 import java.util.Collections;
 import java.util.Comparator;

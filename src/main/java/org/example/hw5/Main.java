@@ -1,14 +1,18 @@
-package org.example.hw4;
+package org.example.hw5;
 
-import org.example.hw4.controller.StudentController;
-import org.example.hw4.controller.TeacherController;
-import org.example.hw4.repository.StudentRepository;
-import org.example.hw4.repository.TeacherRepository;
-import org.example.hw4.service.StudentService;
-import org.example.hw4.service.TeacherService;
-import org.example.hw4.view.SortType;
-import org.example.hw4.view.StudentView;
-import org.example.hw4.view.TeacherView;
+import org.example.hw5.controller.StudentController;
+import org.example.hw5.controller.StudyGroupController;
+import org.example.hw5.controller.TeacherController;
+import org.example.hw5.repository.StudentRepository;
+import org.example.hw5.repository.StudyGroupRepository;
+import org.example.hw5.repository.TeacherRepository;
+import org.example.hw5.service.StudentService;
+import org.example.hw5.service.StudyGroupService;
+import org.example.hw5.service.TeacherService;
+import org.example.hw5.view.SortType;
+import org.example.hw5.view.StudentView;
+import org.example.hw5.view.StudyGroupView;
+import org.example.hw5.view.TeacherView;
 
 
 public class Main {
@@ -32,6 +36,8 @@ public class Main {
         teacherView.create("Alena Ivanova", 33, "1146" );
         teacherView.sendOnConsole(SortType.AGE);
 
+
+
     }
 
     private static StudentView getStudentView() {
@@ -47,5 +53,13 @@ public class Main {
         TeacherController teacherController = new TeacherController(teacherService);
         return new TeacherView(teacherController);
     }
+
+    private static StudyGroupView getStudyGroupView() {
+        StudyGroupRepository studyGroupRepository = new StudyGroupRepository();
+        StudyGroupService studyGroupService = new StudyGroupService(studyGroupRepository);
+        StudyGroupController studyGroupController = new StudyGroupController(studyGroupService);
+        return new StudyGroupView(studyGroupController);
+    }
+
 
 }

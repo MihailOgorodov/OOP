@@ -1,6 +1,6 @@
-package org.example.hw4.service;
+package org.example.hw5.service;
 
-import org.example.hw4.model.User;
+import org.example.hw5.model.User;
 
 import java.util.Comparator;
 

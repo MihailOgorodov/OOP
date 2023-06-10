@@ -1,4 +1,4 @@
-package org.example.hw4.view;
+package org.example.hw5.view;
 
 public interface SortType {
     String NONE = "none";

@@ -1,7 +1,7 @@
-package org.example.hw4.model;
+package org.example.hw5.model;
 import lombok.Getter;
 import lombok.ToString;
-import org.example.hw4.service.StudentGroupIterator;
+import org.example.hw5.service.StudentGroupIterator;
 
 import java.util.ArrayList;
 import java.util.Iterator;

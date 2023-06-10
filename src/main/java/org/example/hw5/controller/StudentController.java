@@ -1,8 +1,10 @@
-package org.example.hw4.controller;
+package org.example.hw5.controller;
 
-import org.example.hw4.model.Student;
-import org.example.hw4.service.StudentService;
-import org.example.hw4.service.UserService;
+import org.example.hw5.model.Student;
+import org.example.hw5.model.Teacher;
+import org.example.hw5.service.StudentService;
+import org.example.hw5.service.StudyGroupService;
+import org.example.hw5.service.UserService;
 
 import java.util.List;
 
@@ -10,8 +12,11 @@ public class StudentController implements UserController<Student> {
 
     public UserService<Student> studentService;
 
+    StudyGroupService studyGroupService;
+
     public StudentController(StudentService studentService) {
         this.studentService = studentService;
+        studyGroupService = new StudyGroupService();
     }
 
     @Override
@@ -30,7 +35,7 @@ public class StudentController implements UserController<Student> {
     }
 
     @Override
-    public boolean removeUser(String fullName) {
+    public void removeUser(String fullName) {
         studentService.removeUser(fullName);
         return true;
     }
@@ -43,5 +48,24 @@ public class StudentController implements UserController<Student> {
     @Override
     public List<Student> getAllSortUsersByAge() {
         return studentService.getAllSortUsersByAge();
+    }
+    public void createStudyGroup(Teacher teacher, List<Student> students){
+        studyGroupService.createStudyGroup(teacher, students);
+
+    }
+
+    public Student getStudentInStudentGroup(String fullName){
+        return (Student) studyGroupService.getStudentFromStudentGroup(fullName);
+
+    }
+
+    public List<Student> getSortedListStudentFromStudentGroup(){
+        return studyGroupService.getSortedStudentGroup();
+
+    }
+
+    public List<Student> getSortedListByFIOStudentFromStudentGroup(){
+        return studyGroupService.getSortedByFIOStudentGroup();
+
     }
 }

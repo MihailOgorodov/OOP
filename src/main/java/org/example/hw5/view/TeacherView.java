@@ -1,33 +1,33 @@
-package org.example.hw4.view;
+package org.example.hw5.view;
 
-import org.example.hw4.controller.UserController;
-import org.example.hw4.model.Student;
+import org.example.hw5.controller.UserController;
+import org.example.hw5.model.Teacher;
 
 import java.util.List;
 
-public class StudentView implements UserView<Student> {
-    UserController<Student> controller;
+public class TeacherView implements UserView<Teacher>{
+    UserController<Teacher> controller;
 
-    public StudentView(UserController<Student> controller) {
+    public TeacherView(UserController<Teacher> controller) {
         this.controller = controller;
     }
 
     @Override
     public void sendOnConsole(String sortType) {
-        List<Student> students = switch (sortType) {
+        List<Teacher> teachers = switch (sortType) {
             case SortType.NONE -> controller.getAll();
             case SortType.NAME -> controller.getAllSortUsers();
             case SortType.FAMILY -> controller.getAllSortUsersByFamilyName();
             case SortType.AGE -> controller.getAllSortUsersByAge();
             default -> null;
         };
-        if (students == null)  {
-            System.out.println("students is null");
+        if (teachers == null)  {
+            System.out.println("teachers is null");
             return;
         }
         System.out.println("=====================");
-        for (Student student : students) {
-            System.out.println(student);
+        for (Teacher teacher : teachers) {
+            System.out.println(teacher);
         }
         System.out.println("=====================");
     }

@@ -1,8 +1,8 @@
-package org.example.hw4.controller;
+package org.example.hw5.controller;
 
-import org.example.hw4.model.Teacher;
-import org.example.hw4.service.TeacherService;
-import org.example.hw4.service.UserService;
+import org.example.hw5.model.Teacher;
+import org.example.hw5.service.TeacherService;
+import org.example.hw5.service.UserService;
 
 import java.util.List;
 
@@ -29,7 +29,7 @@ public class TeacherController implements UserController<Teacher> {
     }
 
     @Override
-    public boolean removeUser(String fullName) {
+    public void removeUser(String fullName) {
         teacherService.removeUser(fullName);
         return true;
     }

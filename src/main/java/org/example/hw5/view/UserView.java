@@ -1,6 +1,6 @@
-package org.example.hw4.view;
+package org.example.hw5.view;
 
-import org.example.hw4.model.User;
+import org.example.hw5.model.User;
 
 public interface UserView<T extends User> {
     void sendOnConsole(String sortType); //GET

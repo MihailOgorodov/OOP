@@ -1,6 +1,6 @@
-package org.example.hw4.repository;
+package org.example.hw5.repository;
 
-import org.example.hw4.model.Student;
+import org.example.hw5.model.Student;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,41 +1,43 @@
-package org.example.hw4.view;
+package org.example.hw5.view;
 
-import org.example.hw4.controller.UserController;
-import org.example.hw4.model.Teacher;
+import org.example.hw5.controller.UserController;
+import org.example.hw5.model.Student;
+import org.example.hw5.model.StudyGroup;
 
 import java.util.List;
 
-public class TeacherView implements UserView<Teacher>{
-    UserController<Teacher> controller;
+public class StudyGroupView implements UserView<StudyGroup>{
+    UserController<StudyGroup> controller;
 
-    public TeacherView(UserController<Teacher> controller) {
+    public StudyGroupView(UserController<StudyGroup> controller) {
         this.controller = controller;
     }
 
     @Override
     public void sendOnConsole(String sortType) {
-        List<Teacher> teachers = switch (sortType) {
+        List<StudyGroup> studyGroups = switch (sortType) {
             case SortType.NONE -> controller.getAll();
             case SortType.NAME -> controller.getAllSortUsers();
             case SortType.FAMILY -> controller.getAllSortUsersByFamilyName();
             case SortType.AGE -> controller.getAllSortUsersByAge();
             default -> null;
         };
-        if (teachers == null)  {
-            System.out.println("teachers is null");
+        if (studyGroups == null)  {
+            System.out.println("studyGroups is null");
             return;
         }
         System.out.println("=====================");
-        for (Teacher teacher : teachers) {
-            System.out.println(teacher);
+        for (StudyGroup studyGroup : studyGroups) {
+            System.out.println(studyGroup);
         }
         System.out.println("=====================");
     }
 
     @Override
     public void create(String fullName, Integer age, String phoneNumber) {
-        controller.create(fullName, age, phoneNumber);
+
     }
+
 
     @Override
     public void removeUser(String fullName) {
