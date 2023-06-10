@@ -27,9 +27,9 @@ public class Main {
         view.sendOnConsole(SortType.FAMILY);
         view.sendOnConsole(SortType.AGE);
 
-        teacherView.create("Elena Viktorovna", 35, "4789" );
+        teacherView.create("Elena Sidorova", 35, "4789" );
         teacherView.create("Oleg Petrovich", 45, "4456" );
-        teacherView.create("Alena Ivanovna", 33, "1146" );
+        teacherView.create("Alena Ivanova", 33, "1146" );
         teacherView.sendOnConsole(SortType.AGE);
 
     }

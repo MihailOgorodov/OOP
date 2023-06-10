@@ -8,6 +8,7 @@ import org.example.hw4.repository.UserRepository;
 
 import java.util.Collections;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class TeacherService implements UserService<Teacher> {
@@ -48,8 +49,9 @@ public class TeacherService implements UserService<Teacher> {
     public List<Teacher> getAllSortUsersByAge() {
         List<Teacher> teachers = teacherRepository.getAll();
 
-        teachers.sort((o1, o2) -> o1.getAge().compareTo(o2.getAge()));
-//        students.sort(Comparator.comparing(User::getAge));
+        teachers.sort(Comparator.comparing(User::getAge));
+//      teachers.sort((o1, o2) -> o1.getAge().compareTo(o2.getAge()));
+
 
         return teachers;
     }

@@ -22,6 +22,6 @@ public class Teacher extends User implements Comparable<Teacher> {
     }
 
     public String toString() {
-        return String.format("%s\t%s\t%s\t%s", getId(), getFullName(), getAge(), getPhoneNumber());
+        return String.format("Teacher: %s\t%s\t%s\t%s", getId(), getFullName(), getAge(), getPhoneNumber());
     }
 }
