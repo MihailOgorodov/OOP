@@ -5,7 +5,7 @@ import org.example.hw5.model.Teacher;
 
 import java.util.List;
 
-public class TeacherView implements UserView<Teacher>{
+public class TeacherView implements UserView<Teacher> {
     UserController<Teacher> controller;
 
     public TeacherView(UserController<Teacher> controller) {
@@ -21,7 +21,7 @@ public class TeacherView implements UserView<Teacher>{
             case SortType.AGE -> controller.getAllSortUsersByAge();
             default -> null;
         };
-        if (teachers == null)  {
+        if (teachers == null) {
             System.out.println("teachers is null");
             return;
         }

@@ -21,7 +21,7 @@ public class StudentView implements UserView<Student> {
             case SortType.AGE -> controller.getAllSortUsersByAge();
             default -> null;
         };
-        if (students == null)  {
+        if (students == null) {
             System.out.println("students is null");
             return;
         }

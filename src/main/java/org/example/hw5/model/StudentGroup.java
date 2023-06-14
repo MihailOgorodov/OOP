@@ -1,4 +1,5 @@
 package org.example.hw5.model;
+
 import lombok.Getter;
 import lombok.ToString;
 import org.example.hw5.service.StudentGroupIterator;

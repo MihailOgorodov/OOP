@@ -16,6 +16,7 @@ public class Teacher extends User implements Comparable<Teacher> {
     public Teacher(Long id, String fullName, Integer age, String phoneNumber) {
         super(id, fullName, age, phoneNumber);
     }
+
     @Override
     public int compareTo(Teacher o) {
         return getFullName().compareTo(o.getFullName());

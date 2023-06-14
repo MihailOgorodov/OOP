@@ -17,6 +17,7 @@ public class TeacherService implements UserService<Teacher> {
     public TeacherService(TeacherRepository teacherRepository) {
         this.teacherRepository = teacherRepository;
     }
+
     @Override
     public void create(String fullName, Integer age, String phoneNumber) {
         Long id = teacherRepository.getMaxId() + 1;
